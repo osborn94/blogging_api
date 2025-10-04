@@ -82,7 +82,7 @@ const GetAllBlogs = async ({
 
   // Pagination
   const pageNum = parseInt(page) || 1;
-  const limitNum = parseInt(limit) || 10;
+  const limitNum = parseInt(limit) || 20;
   const skip = (pageNum - 1) * limitNum;
 
   const total = await BlogModel.countDocuments(query);
@@ -170,7 +170,7 @@ const GetAllBlogsByUser = async ({
 
   // Pagination
   const pageNum = parseInt(page) || 1;
-  const limitNum = parseInt(limit) || 10;
+  const limitNum = parseInt(limit) || 20;
   const skip = (pageNum - 1) * limitNum;
 
   // Get total count for pagination
